@@ -1,0 +1,9 @@
+When using footnote references in Textile markup, the source editor displays the whole line as superscript
+
+only the footnote reference itself should be in superscript
+
+Example markup with this problem:
+
+For example[1]
+
+fn1. some footnote

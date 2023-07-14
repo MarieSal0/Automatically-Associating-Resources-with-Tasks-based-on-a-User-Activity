@@ -1,0 +1,12 @@
+IInteractionContextListener not properly removed
+
+Steps:
+
+1. The project explorer is closed, a task is active
+2. Open the project explorer and select something to have it construct its actions
+3. Close the project explorer
+4. Activate another task
+
+Result: Eclipse is slow
+
+If InteractionContextManager.remove() is invoked it does not remove the listener from the waitingListener field causing the disposed focus action on the project explorer to get added to the list of listeners on the next context activation. This code does not look thread safe and it's not clear to me why the waitingListener field is needed since listener is already a CopyOnWriteArrayList. Why not add directly to listener?

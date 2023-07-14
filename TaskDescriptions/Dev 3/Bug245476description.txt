@@ -1,0 +1,3 @@
+disable HTML tag Textile extensions in BugzillaTextileLanguage
+
+It is common for users to paste HTML and XML tags into bug descriptions and comments, and unlikely that users will use HTML tags for markup purposes.  java class BugzillaTextileLanguage should not accept HTML tags as markup, but rather should treat them as normal text.

@@ -1,0 +1,3 @@
+[api] Listeners API should allow to pass multiple events in one call
+
+Listeners API, such as ITaskListChangeListener and ITaskActivityListener, should allow to pass multiple events in one call. So, actions on multple elements in Task List view, like delete, mark read, shedule..., etc would be actually usable.

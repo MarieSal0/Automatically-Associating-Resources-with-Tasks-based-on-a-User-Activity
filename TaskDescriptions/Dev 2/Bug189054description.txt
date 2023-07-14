@@ -1,0 +1,16 @@
+deadlock in ContextCorePlugin.start
+
+org.eclipse.mylar.context.core.ContextCorePlugin.start can deadlock!
+This seems to be a problem with sun java VMs. The problem comes from
+the fact that ContextCorePlugin.start tries to create a executable extension. 
+
+For details (including stack trace) see bug 188943. I filed this bug against equinox and they marked it as fixed:
+
+> Actually there is a more general "best practice" that says "do as few as
+> possible in the activator" and since creating an executable extension is not a
+> trivial operation it falls under the typical things that you should not do.
+
+
+I think this is a major bug, because the only way to get out of the deadlock is to kill eclipse. It happend to me several times at startup.
+
+I use org.eclipse.mylar.ide_feature_2.0.0.v20070403 with eclipse 3.3 M7

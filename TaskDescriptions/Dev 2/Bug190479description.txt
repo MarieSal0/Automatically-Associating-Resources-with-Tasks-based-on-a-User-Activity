@@ -1,0 +1,3 @@
+Report bug menu behavior should be configurable
+
+The presence of "report bug" entry in the help menu makes the usage of mylar in a product based setup hard, since it directly references the eclipse repository to enter bugs, whereas products want bugs to be  opened against them. See for example redhat.

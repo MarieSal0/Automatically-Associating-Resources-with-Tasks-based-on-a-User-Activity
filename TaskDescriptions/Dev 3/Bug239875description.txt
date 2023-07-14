@@ -1,0 +1,3 @@
+rename "repository" attribute to "connectorKind"
+
+The repository attribute in the repositoryAssociation extension of the org.eclipse.mylyn.sandbox.ui.taskEditorExtensions extension point should be renamed to connectorKind

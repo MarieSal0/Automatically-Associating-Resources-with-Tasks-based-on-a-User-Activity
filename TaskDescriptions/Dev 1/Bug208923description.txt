@@ -1,0 +1,3 @@
+"mark as read" action in the task list removes selection
+
+"mark as read" action in the task list removes selection. you have to hit "Down" to select something again before you can mark next task read.

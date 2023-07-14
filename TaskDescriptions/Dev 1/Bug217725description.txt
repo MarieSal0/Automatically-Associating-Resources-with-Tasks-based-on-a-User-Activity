@@ -1,0 +1,3 @@
+[api] review plug-in and feature dependencies
+
+There are some strange dependencies required for mylyn.tasks.core and mylyn.tasks.ui. Would be nice to clean this for 3.0. I'll post some more details in further comments.

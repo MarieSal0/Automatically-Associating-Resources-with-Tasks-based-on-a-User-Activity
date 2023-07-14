@@ -1,0 +1,3 @@
+[api] MarkupLanguage internal link configuration API
+
+Every wiki uses a method of converting short-hand linking syntax to wiki-internal pages.  There should be a general but flexible API on MarkupLanguage to configure the location of such links, either for stand-alone linking  (with an absolute URL) or for relative linking.  The configuration method must be general enough to handle different wiki implementations.

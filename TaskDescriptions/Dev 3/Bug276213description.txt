@@ -1,0 +1,14 @@
+add support for specifying Mylyn version constraint
+
+It is not uncommon for connectors to use Mylyn internals. It is recommended to specify a version constraint that is compatible to the corresponding major release version in that case, e.g. [3.1.0,3.2.0) for a connector that works with Mylyn 3.1. Once a newer Mylyn major release is available the version specified by the connector has to be updated and a new connector release is required. The discovery UI should support this scenario. I can see the following options:
+
+* The old Mylyn release should not allow installation of the new connector version: 
+** The discovery UI indicate that a Mylyn upgrade is required to install the connector.
+** The discovery UI could support multiple versions of the same connector with different version constraints against Mylyn and allow installation of an old version of the connector.
+** The connector could be hidden from the discovery UI
+
+* The new Mylyn release show not allow installation of the old connector:
+** The discovery UI indicate that the connector is not available for the particular Mylyn release if it has not been updated for the release.
+** The discovery UI could hide the old connector if it has not been updated for the Mylyn release.
+
+The version of the org.eclipse.mylyn_feature feature is representative of the installed Mylyn version.

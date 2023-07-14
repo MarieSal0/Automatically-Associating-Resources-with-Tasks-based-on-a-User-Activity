@@ -1,0 +1,11 @@
+credentials are not checked if anonymous access is not supported
+
+If a connector does not support anonymous login (AbstractRepositorySettingsPage.needsAnonymousLogin() returns false) the check whether both username and password are specified is omitted in the repository settings page.
+
+This odd behavior is caused by a malformed if-condition in AbstractRepositorySettingsPage.credentialsComplete():
+
+if ((needsAnonymousLogin() && !anonymousButton.getSelection())
+    && (repositoryUserNameEditor.getStringValue().trim().equals("") || 
+       (repositoryPasswordEditor.getStringValue().trim().equals("")))) {
+    return "Repository user name and password must not be blank";
+}

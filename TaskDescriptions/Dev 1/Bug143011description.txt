@@ -1,0 +1,3 @@
+[api] synchronization jobs should be cancelable
+
+They can get hung indefinitely on http connection problems, but can not currently be cancelled via the progress view.

@@ -1,0 +1,3 @@
+[api] make it possible for clients to override the Task Editor toolbar
+
+The toolbar is currently tangled with the addition of the other header controls.  While in general we want toolbars to be standardized (e.g. for different kinds of tasks), we should make this more flexible until the various kinds are supported by the framework.

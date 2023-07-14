@@ -1,0 +1,16 @@
+[api] It would be useful for IInteractionContext to provide a means for knowing if something is interesting
+
+while it is currently possible to know if something is interesting given an IInteractionContext, the current APIs make the code inefficient.  A new method on IInteractionContext would make the query easy and fast.
+
+Suggested API change on @IInteractionContext@:
+
+bc. 
+	/**
+	 * indicate if the interaction element identified by the given handle is interesting
+	 * 
+	 * @param elementHandle
+	 *            the {@link IInteractionElement#getHandleIdentifier() handle identifier}
+	 * 
+	 * @return true if an {@link #getInteresting() interesting} interaction element exists with the given handle
+	 */
+	public boolean isInteresting(String elementHandle);

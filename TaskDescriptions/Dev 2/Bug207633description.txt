@@ -1,0 +1,3 @@
+[api] InteractionEvent lacks comments
+
+The purpose of the fields in InteractionEvent is not immediately clear to me. Specifically, what is the purpose of the originId, structureKind, structureHandle, navigation, delta, and interestContribution fields?

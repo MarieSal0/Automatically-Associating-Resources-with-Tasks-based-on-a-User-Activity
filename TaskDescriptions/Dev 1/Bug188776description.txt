@@ -1,0 +1,5 @@
+[api] support task relationships
+
+The task list supports sub tasks (bug 187275) but tasks can have other relationships as well such as "depends on", "blocks", "duplicate of" etc. The task list should have data structures to represent these relations and visualize them. It would also be nice if the task editor displayed a list of related tasks.
+
+JIRA actually allows to define arbitrary relations for sub-tasks. It additionally supports links between issues that are defined by an outward and inward link-description so this API needs to be rather generic.

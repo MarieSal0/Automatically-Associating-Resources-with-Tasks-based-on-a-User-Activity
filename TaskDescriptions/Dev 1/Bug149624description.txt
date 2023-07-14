@@ -1,0 +1,5 @@
+[api] AbstractRepositoryTask repositoryUrl and task id should not be derived from handleIdentifier
+
+AbstractRepositoryTask repositoryUrl and task id should not be derived from handleIdentifier. Current API is very confusing and does not give enough flexibility. For example in web provider I have repositoryUrl, task id and task prefix. In some cases (e.g. SourceForge) task prefix is defined per query.
+
+Please refactor API to keep separate repositoryUrl, taskUrl (same as current handle identifier) and task id.

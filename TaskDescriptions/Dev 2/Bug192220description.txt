@@ -1,0 +1,6 @@
+[api] AbstractAutoFocusViewAction should be public API
+
+Build ID: I20070323-1616
+
+Steps To Reproduce:
+1. org.eclipse.mylyn.internal.context.ui.actions.AbstractAutoFocusViewAction is in an internal package, however it is necessary to extend this class to have an apply-Mylyn button on a view.

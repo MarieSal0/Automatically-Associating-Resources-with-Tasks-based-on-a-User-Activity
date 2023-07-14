@@ -1,0 +1,3 @@
+TracWiki task editor extension
+
+the tracwiki plug-in should contribute a task editor extension

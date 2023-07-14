@@ -1,0 +1,3 @@
+[performance] optimize AbstractTaskContainer.contains()
+
+The task list spents a lot of CPU time in AbstractTaskContainter.contains() on refresh. AbstractTaskContainter.containsHelper() and AbstractTaskContainter.getChildren() need to be optimized.

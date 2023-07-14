@@ -1,0 +1,8 @@
+HtmlDocumentBuilder beginDocument extensibility improvements
+
+
+I extended the class org.eclipse.mylyn.wikitext.core.parser.builder.HtmlDocumentBuilder to create my own HTML Variation. Specifically I want to parameterize style sheets and include some javascript links. I found that the only ways to influence the <head>...<head/> contents at all are the calls to setTitle(...) and addCssStyleSheet(...). For me this is insufficient because I want to add some more attributes to the style sheet link. I also want to include a link to some Javascript file.
+
+The only way to make this work is to override beginDocument() and not call super.beginDocument(). So I have to write everything until <body> myself.
+
+Please provide a hook in HtmlDocumentBuilder.beginDocument() to allow subclasses adding own stuff to the HTML head.

@@ -1,0 +1,5 @@
+[api] AbstractRepositoryConnector.createTask() is not sufficient for creating tasks
+
+AbstractRepositoryConnector.createTask() is not sufficient for creating tasks. For example, WebTask require additional task prefix that can't be set using this factory method. 
+
+There is also ITaskFactory (bound to task data) and AbstractTaskListFactory (bound to XML DOM !?!?) that can be also used to create tasks and all quite confusing.

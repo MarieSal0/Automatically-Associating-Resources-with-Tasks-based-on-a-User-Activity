@@ -1,0 +1,3 @@
+TaskRepositoryLabelProvider line 61: getText() method returns itself
+
+It appears that if you fall through the getText method in TaskLabelProvider, the method decides to return itself and leads to a StackOverflowError.

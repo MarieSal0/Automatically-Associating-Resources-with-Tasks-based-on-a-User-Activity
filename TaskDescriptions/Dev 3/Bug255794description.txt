@@ -1,0 +1,19 @@
+standalone wikitext can't convert Confluence style markup
+
+Steps To Reproduce:
+Use ant to convert a Confluence style textile file to html.
+The result is an class not found exception.
+
+More information:
+The problem is that inside of the confluence.core jar, there is a file:
+META-INF/services/org.eclipse.mylyn.wikitext.core.parser.markup.MarkupLanguage
+which has a classname in it which is incorrect.  It is missing the .core. from the package name.
+
+After changing this package name it worked for me.
+
+I found this bug in the standalone wikitext download here:
+http://www.eclipse.org/mylyn/downloads/
+which gave me this version:
+0.9.1.I20081118-0300-e3x
+
+On a different note, the documentation for setting up the ant classpath is incorrect.  The pattern used does not match all of the jars files.

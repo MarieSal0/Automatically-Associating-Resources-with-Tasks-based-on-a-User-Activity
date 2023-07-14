@@ -1,0 +1,9 @@
+TaskRepository should extend PlatformObject
+
+Because TaskRepository doesn't implement IAdaptable, the registered adapter for TaskRepository=>IActionFilter doesn't get consulted on Eclipse 3.2, so the "supportsQuery" test doesn't work, so the contributed "New Task...", "New Query...", and "Open Repository Task..." popupMenu items in the Task Repositories view do not get enabled.
+
+In Eclipse 3.3, that particular problem goes away because various parts of Eclipse, including the objectState test, now go on to consult the Adapter Manager manually if an object doesn't implement  IAdaptable.
+
+Nevertheless, it seems wise to me that key Mylyn objects such as TaskRepository should extend PlatformObject (or otherwise implement IAdaptable) to prevent oddities like this from occurring. People expect IAdaptable to be implemented.
+
+I have not examined the code to see which other API objects such a change could apply to.

@@ -1,0 +1,3 @@
+[api] add cloneTaskData() method to TaskDataHandler
+
+For cloning of task data a new method should be added to AbstractTaskDataHandler. A default implementation could clone the common attributes: summary, description and possibly iterate over editable attributes of the source task data and the new task data. The latter is probably only feasible if both task data objects are associated with the same repository. Connectors can overwrite that method and provide a more specific implementation if needed.

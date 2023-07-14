@@ -1,0 +1,3 @@
+[api] add synchronization state for new tasks
+
+Currently the only way to test if a task has incoming changes or is a new task is by invoking "task.getLastReadTimeStamp() == null". This does not work well for (Trac) web tasks that do not have task data for setting the date stamp. The API should make it more obvious how new tasks are differentiated from incoming changes to an existing task, e.g. by adding a "NEW" enum to RepositoryTaskSyncState.

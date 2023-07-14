@@ -1,0 +1,3 @@
+TaskRepositoryManager.clearRepositories() does not trigger event
+
+This can lead to stale JiraServer objects in JiraServerFacade that may have outdated information. Test cases need to either explicitly clean up the server facade or the API needs to send an event.

@@ -1,0 +1,4 @@
+[api] extension for repository properties wizard page
+
+Implement an extension point for contributors to add to the repository properties wizard page UI.  This new feature will facilitate adding configuration UI for properties that are not a part of the repository-specific plug-in, such as the task editor extension.
+Co

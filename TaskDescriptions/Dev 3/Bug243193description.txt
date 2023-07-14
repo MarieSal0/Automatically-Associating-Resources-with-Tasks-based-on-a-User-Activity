@@ -1,0 +1,3 @@
+WikiText validation creates problem markers with the wrong id
+
+problem markers are created with @org.eclipse.mylyn.wikitext.validation.problem@ instead of @org.eclipse.mylyn.wikitext.core.validation.problem@

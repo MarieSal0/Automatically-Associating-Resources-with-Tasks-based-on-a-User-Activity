@@ -1,0 +1,15 @@
+[api] extract context externalization from InteractionContextManager
+
+IInteractionContextManager currently has methods that operate on handles as well as methods that operate on IInteractionContext objects. The methods that use handles are concerned with externalization of contexts whereas other methods deal with processing of events. While loading is managed in the context manager the location of contexts is managed in tasks.ui. This has the following implications:
+
+- Loading of context.core triggers tasks.ui initialization, this can be a cause of dead-locks on startup.
+- Externalization of contexts is currently not properly synchronized and blocks the UI thread.
+- The API is complicated and reuse is limited.
+
+I propose the following changes:
+
+Extract all context externalization from InteractionContextManager to a new class, e.g. ContextStore. Manage the life-cycle of ContextStore in tasks.ui. Tasks ui would manage loading of contexts  explicitly through the ContextStore triggered by task activation / deactivation.
+
+The extension point for AbstractContextStore would not be needed anymore. Context serialization could be handled in the background to not block the UI thread for writing of context files. The API of IInteractionContextManager would be more flexible and would allow loading contexts from other sources than the disk based context store.
+
+The UiUsageMonitor should manage it's interaction log separately from tasks.ui to fix dead-locks on startup.

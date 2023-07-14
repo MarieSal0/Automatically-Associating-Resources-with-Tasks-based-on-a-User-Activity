@@ -1,0 +1,3 @@
+[api] AbstractTaskContainer classes should store children in ConcurrentHashMap
+
+This will avoid problems on concurrent access and modification by giving a "time slice" of the current state of the container when it is accessed.

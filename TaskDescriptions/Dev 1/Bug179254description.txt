@@ -1,0 +1,5 @@
+[api] AbstractRepositoryTaskEditor needs to be decomposed
+
+I think the AbstractRepositoryTaskEditor needs to be split up into several classes to improve its reusability. Although it's pretty easy to write a neat task editor with just a few lines of code (-> TRAC), it's pretty hard if you want to customize the editor in a clean way. I think this could be greatly improved if e.g. the sections would be factored out into their own classes which could be sub-classed.
+
+Here are some examples of things that are hard to implement or at least not possible to implement in a clean way and without duplicating code.

@@ -1,0 +1,7 @@
+[api] improve task externalization API
+
+The main reason is to eliminate org.w3c.dom.* classes from this API and reduce runtime memory footprint of the task externalizers.
+
+As a first step we can introduce own classes for Element, which may use dom classes internally (for now). So, connector's externalizers will only deal with our Element and won't have to change their implementation if we'll need to change externalizer internals.
+
+Another benefit of own Element abstraction is that we can have stream-based implementation, at least for writing task list. That should help to speed things up for saving big task lists.

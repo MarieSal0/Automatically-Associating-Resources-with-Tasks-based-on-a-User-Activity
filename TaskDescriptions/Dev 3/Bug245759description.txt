@@ -1,0 +1,6 @@
+cannot run the HtmlViewer or MarkupViewer in a stand-alone GUI
+
+the HtmlViewer and MarkupViewer should be usable outside of an Eclipse environment (ie: in a stand-alone SWT application)
+This code worked in Textile-J.
+
+Try running java class org.eclipse.mylyn.wikitext.textile.core.Main

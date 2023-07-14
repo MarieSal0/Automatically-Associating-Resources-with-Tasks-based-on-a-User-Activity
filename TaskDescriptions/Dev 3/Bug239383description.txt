@@ -1,0 +1,3 @@
+[wikitext] TaskMarkupViewerConfiguration does not link to repository
+
+TaskMarkupViewerConfiguration may have to override getHyperlinkDetectorTargets() to set a context that is adaptable to a TaskRepository similar to how RepositoryTextViewerConfiguration does this.

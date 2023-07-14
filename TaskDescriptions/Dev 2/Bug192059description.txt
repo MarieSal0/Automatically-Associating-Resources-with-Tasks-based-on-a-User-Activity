@@ -1,0 +1,3 @@
+[api] provide runtime mechanism for registering structure bridges
+
+the ContextCorePlugin has an internalAddBridge(AbstractContextStructureBridge) method.  An equivalent public API would be useful for integration where the bridges can only be determined at runtime.

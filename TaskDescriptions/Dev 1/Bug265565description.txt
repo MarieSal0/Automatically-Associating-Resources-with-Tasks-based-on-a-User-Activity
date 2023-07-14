@@ -1,0 +1,3 @@
+[api] provide access to progress monitor to allow monitoring submit job in progress
+
+When scheduling a SynchronizeQueryJob from a UI component, such as a report, view, etc. there is no existing API available to access the progress of this synchronization which is relevant to the report, view, etc.  It would be helpful if SynchronizeQueryJob (and other sync jobs) had API to access the progress monitor of the job.  This way the view or page owner could report the progress to the user.

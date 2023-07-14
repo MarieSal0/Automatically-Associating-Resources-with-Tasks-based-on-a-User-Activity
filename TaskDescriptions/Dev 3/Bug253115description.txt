@@ -1,0 +1,3 @@
+provide settings page contribution to configure task editor extension
+
+Provide an implementation of TaskEditorExtensionSettingsContribution (bug 244650) for configuring the task editor extension, e.g. for WikiText.

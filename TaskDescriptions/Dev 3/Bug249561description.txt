@@ -1,0 +1,4 @@
+validation rule for TWiki lists
+
+TWiki list syntax is a bit error-prone since it relies on preceding whitespace in multiples of 3.
+WikiText should look for markup that looks like  a list but doesn't quite meet the criteria and create a warning.

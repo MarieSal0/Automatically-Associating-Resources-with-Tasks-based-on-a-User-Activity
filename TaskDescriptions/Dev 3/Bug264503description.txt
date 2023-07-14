@@ -1,0 +1,9 @@
+Task hyperlinking does not work for Trac markup
+
+Task Hyperlinking does not work for Trac markup:
+ * In edit mode, the links are neither clickable nor have a hover.
+ * In preview mode, they are resolved as normal web links and the hover shows the http link. Clicking on the link does not open the rich editor, but the Trac web page in the web browser.
+
+On the other hand, closed tasks are marked by strike-through, so I guess that here is missing a small bit.
+
+The project properties are set to point to the relevant Trac repository.

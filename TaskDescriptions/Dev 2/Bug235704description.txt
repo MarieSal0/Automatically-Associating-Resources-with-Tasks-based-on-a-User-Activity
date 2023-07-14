@@ -1,0 +1,26 @@
+elements not removed from task's context
+
+Eclipse Build ID: I20080523-0100
+Mylyn 3.0.0.I200880526
+Running on Fedora 9
+
+Steps To Reproduce:
+-From a fresh install of Mylyn 3.0.0.I200880526 on Eclipse 3.4RC2, installed via the Ganymede update site
+1. Create a new (local) task, activate
+2. Add elements to the context
+3. Remove elements from the context
+4. Deactivate/reactivate the task
+5. Previously removed elements are still present
+
+
+More information:
+If the task is still active the elements are removed, but when reactivating the task any element previously in the context will appear. 
+
+-Occurs with a single or multiple tasks present, including when switching between tasks
+
+-Occurs if the element is removed via:
+--the right-click menu "Remove From Context" in the package view
+--closing the file from the editor
+--right-click menu "Remove From Context" in the task rich editor
+
+-Only the 'Clear Context' item in the task rich editor removes all elements permanently

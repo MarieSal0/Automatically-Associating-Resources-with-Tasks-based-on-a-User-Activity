@@ -1,0 +1,3 @@
+[api] improve task editor input hierarchy
+
+Currently NewTaskEditorInput and RepositoryTaskEditorInput extend AbstractTaskEditorInput but TaskEditorInput stands alone. This needs to be resolved and MylarTaskEditor.addPages() simplified/updated.

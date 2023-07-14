@@ -1,0 +1,5 @@
+API clean-up
+
+add @since tags to all API classes
+remove usage of @printStackTrace()@
+make WikiTextPlugin internal, expose functionality via a singleton with statics as per TasksUI

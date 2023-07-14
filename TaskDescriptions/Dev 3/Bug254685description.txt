@@ -1,0 +1,3 @@
+set unpack=false for org.eclipse.mylyn.wikitext.mediawiki.ui
+
+All plug-ins in the wikitext feature have unpack=false set except for org.eclipse.mylyn.wikitext.mediawiki.ui. It's considered good practice to not unpack plug-ins and a requirement for Galileo unless there are technical reason (bug 253853). Are there technical reasons in this case or can the flag be added to the feature.xml?

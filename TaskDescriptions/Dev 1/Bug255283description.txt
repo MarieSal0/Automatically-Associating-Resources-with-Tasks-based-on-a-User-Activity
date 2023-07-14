@@ -1,0 +1,3 @@
+add context menu to the title and heading of task editor
+
+When the user right-clicks (or equivalent) in the task editor in almost any part the context menu will show.  However, the title and the heading do not support this, even though they are among the most likely places to be clicked since they are near the top.  The context menu should be added to these parts.

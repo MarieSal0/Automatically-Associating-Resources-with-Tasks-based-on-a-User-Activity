@@ -1,0 +1,3 @@
+Task editor extensions for repositories that support wiki links should provide a default configuration for wiki link pattern
+
+The task editor extension should provide a default configuration based on the repository URL if possible

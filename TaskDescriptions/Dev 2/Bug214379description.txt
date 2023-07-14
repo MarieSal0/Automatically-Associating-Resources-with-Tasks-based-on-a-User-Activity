@@ -1,0 +1,7 @@
+[api] Generalize screen capture UI and other common facilities for cross-project use
+
+Currently Mylyn has a wizard-based screen capture user interface.  Several other projects (e.g. ECF) have the need for a screen capture UI for different purposes (in ECF's case, for transmission to others via IM rather than/in addition to saving to file).
+
+For user simplicity, it would be helpful to have one (extensible) user interface for doing screen capture.  It would allow some amount of flexibility on how/what of the screen was captured (e.g. the entire display, workbench, view, selected screen region), how much time delay before the shot is actually taken, and perhaps some basic/flexible editing capabilities (e.g. bug#195691, bug#209897, bug#210020, bug#210179).
+
+For ECF's use cases, it would be helpful to have much of the screen capture user interface be optionally displayed/used, in order to keep the usage easy and lightweight.  Further, it would be desirable to have minimal dependencies on non-swt or jface plugins so that multiple environment (i.e. non-Eclipse) usage is possible.

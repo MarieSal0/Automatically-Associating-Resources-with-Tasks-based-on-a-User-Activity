@@ -1,0 +1,13 @@
+[context] Mylyn is not auto-closing editors
+
+(Versions: Mylyn 2.1 and Eclipse 3.3.1)
+
+The Java UI bridge is failing to close editors when they become uninteresting. Rest of content is quoted from my newsgroup posting ("Aren't my editors supposed to auto-close?").
+
+Okay, I'm seeing two things here. Firstly, it seems to me that Mylyn appears pretty reluctant to actually remove documents from interest automatically, but it will do it. But I suspect this may be partly due to my artificial testing not matching real usage patterns.
+
+Anyway, the main problem occurs in JavaUiBridge.close(). It loops over getActivePage().getEditorReferences() trying to locate an editor for the node being closed.
+
+The stumbling block appears to be that the method it uses, EditorReference.getEditor(false), only actually returns an editor if the editor is active. If it's one of the ones buried at the back of the stack, it returns null.
+
+So the auto-close will only ever work if the document that's become uninteresting is one of the ones you're working on! Very unlikely, unless you've manually selected "remove from context".

@@ -1,0 +1,3 @@
+[api] add support for creating subtasks
+
+Provide an action and API for creating subtasks in the tasks framework.

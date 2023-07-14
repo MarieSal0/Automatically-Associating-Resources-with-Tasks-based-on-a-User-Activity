@@ -1,0 +1,3 @@
+fading of popup notifications block UI
+
+The fading currently invokes Thread.sleep() in the UI thread causing Eclipse to block while the popup is being displayed. I have disabled the fading as a work around for now. We need to implement some type of scheduling that uses a separate thread to do the fading.

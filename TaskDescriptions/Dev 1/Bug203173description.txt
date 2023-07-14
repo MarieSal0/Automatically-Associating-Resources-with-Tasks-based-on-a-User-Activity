@@ -1,0 +1,5 @@
+Optimize query that checks for changed tasks
+
+Narrow down the query that retrieves the list of changed tasks from a JIRA repository:
+
+- JIRA does not allow to run a query against a list of tasks therefore the list of changed tasks is not limited to the ones in the task list but includes all tasks in the repository

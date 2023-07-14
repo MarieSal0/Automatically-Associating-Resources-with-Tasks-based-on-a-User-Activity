@@ -1,0 +1,3 @@
+Move WebQueryHit and WebTask back to org.eclipse.mylar.tasks.web
+
+According to Mik, the problem right now is that WebQueryHit and WebTask don't follow the API contract (not sure which one) so tasks.core has to have a few special rules for them. It would be good to clean this for 2.0
