@@ -1,5 +1,5 @@
 # Automatically-Associating-Resources-with-Tasks-based-on-a-User-s-Activity
-Dataset to replicate the results from the thesis "Automatically Associating Resources with Tasks based on a User’s Activity"
+Dataset to replicate the results from the case studies in the thesis "Automatically Associating Resources with Tasks based on a User’s Activity"
 
 The Dataset consists of the following three components:
 1. 60 task descriptions (20 per developer)
